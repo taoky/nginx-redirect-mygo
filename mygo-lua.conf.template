@@ -1,0 +1,10 @@
+location = /mygo-lua {
+    content_by_lua_block {
+        local urls = {
+            %%mygo%%
+        }
+        local random_url = urls[math.random(#urls)]
+        ngx.redirect(random_url, 302)
+    }
+    internal;
+}

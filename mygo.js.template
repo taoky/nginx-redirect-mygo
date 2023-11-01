@@ -1,0 +1,7 @@
+function mygo(r) {
+    var urls = [%%mygo%%];
+    var random_url = urls[Math.floor(Math.random() * urls.length)];
+    r.return(302, random_url);
+}
+
+export default {mygo};
